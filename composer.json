@@ -1,5 +1,5 @@
 {
-    "name": "gayan/intercom-php",
+    "name": "gayanhewa/intercom-php",
     "type": "Library",
     "require": {
         "rmccue/requests": "^1.6"
