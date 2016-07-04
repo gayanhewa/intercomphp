@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gayanhewa/intercomphp.svg?branch=master)](https://travis-ci.org/gayanhewa/intercomphp)
+
 # Intercom 3rd Party Libaray
 
 This is an unofficial api for Intercom (https://developers.intercom.io/).
