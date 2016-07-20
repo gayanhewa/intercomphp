@@ -23,7 +23,7 @@ abstract class abstractRequester
     public function getRequest($url)
     {
 
-        $headers = array('Accept' => 'application/json');
+        $headers = array('Accept' => 'application/json', 'content-type' => 'application/json');
         $options = array('auth' => new Requests_Auth_Basic($this->signature));
         $res = Requests::get($url, $headers, $options);
 
@@ -33,9 +33,9 @@ abstract class abstractRequester
     public function postRequest($url, $params = null)
     {
 
-        $headers = array('Accept' => 'application/json');
+        $headers = array('Accept' => 'application/json', 'content-type' => 'application/json');
         $options = array('auth' => new Requests_Auth_Basic($this->signature));
-        $res = Requests::post($url, $headers, $params, $options);
+        $res = Requests::post($url, $headers, json_encode($params), $options);
 
         return json_decode($res->body, true);
     }
