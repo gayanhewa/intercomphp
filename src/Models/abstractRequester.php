@@ -35,7 +35,8 @@ abstract class abstractRequester
 
         $headers = array('Accept' => 'application/json', 'content-type' => 'application/json');
         $options = array('auth' => new Requests_Auth_Basic($this->signature));
-        $res = Requests::post($url, $headers, json_encode($params), $options);
+        // JSON_PRETTY_PRINT == 128 , the contant support is only added since PHP 5.4
+        $res = Requests::post($url, $headers, json_encode($params, 128), $options);
 
         return json_decode($res->body, true);
     }
