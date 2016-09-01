@@ -44,4 +44,18 @@ class IntercomTest extends \PHPUnit_Framework_TestCase
 
   }
 
+  public function testCanMakeBulkUsersModel()
+  {
+      $users = $this->intercom->make('bulkUsers');
+      $this->assertTrue($users instanceOf Intercom\Models\BulkUsers);
+
+  }
+
+  public function testCanMakeBulkEventsModel()
+  {
+      $users = $this->intercom->make('bulkEvents');
+      $this->assertTrue($users instanceOf Intercom\Models\BulkEvents);
+
+  }
+
 }
